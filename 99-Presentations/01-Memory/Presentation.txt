@@ -1,0 +1,61 @@
+
+##### Structure of the presentation #####
+
+
+
+### I/ Creating a .jpg file ###
+
+# 1/ Create an inode.
+The inode is a data structure that contains metadata about another file such as size, time stamp, memory block address etc.
+
+# 2/ Create a register entry (waldo.jpg).
+A register entry is an entry located in a specific register thta keeps track of all the files on the computer by name and is linked to their respective inode.
+
+# 3/ Memory block allocation (reserve space).
+A memory block or sector is found and allocated to the file that is being created.
+
+# 4/ Writes the memory blocks starting with file's jpg signature (FF D8 FF) and finishing with (FF D9).
+In between is the data defining the actual content of the file.
+
+
+
+
+### II/ Erase file ###
+
+# 1/ Remove the directory entry
+
+# 2/ The inode is deallocated 
+
+# 3/ The memory blocks are also deallocated
+Which means the data and signature around it remain until covered by something else.
+
+
+
+
+### III/ Photorec ###
+
+# 1/ Scans the disk for unallocated or free sectors (memory blocks) for letfover data.
+(Photorec looks for orphaned blocks, and do not work with inode or register entry.)
+
+# 2/ It scans the memory blocks for signatures in this example: (FF D8 FF --- FF D9).
+
+# 3/ It reconstructs the .jpg file with the data in between the start and end signature.
+
+# 4/ Saves the file to a new location.
+
+
+
+
+### IV/ shredScript
+
+# 1/ Overwrite file's data blocks multiple times with random data.
+
+# 2/ Overwrite file's data blocks with zeroes (default value).
+
+# 3/ Removes the inode and it's metadata as well as the directory entry.
+
+
+
+
+
+

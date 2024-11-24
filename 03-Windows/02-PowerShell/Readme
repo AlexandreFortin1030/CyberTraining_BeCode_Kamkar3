@@ -1,0 +1,157 @@
+###---> As a linux user I must say I got a bit confused about the difference between cmd.exe and PowerShell. So I made some research about it.
+They are in fact both command line interface but cmd is older and used mainly for daily tasks. 
+PowerShell on the other hand is more recent and more powerfull. It has far better scripting capabilities and can therefore be used for automation
+and system administration.
+
+
+
+
+
+##### RTFM #####
+
+
+# -> $Get-Help <command>
+Is a sort of manual displaying the syntax, options and effect of a command.
+![alt text](get-helpCmd.png)
+
+# -> $Get-Process
+Get the processes that are running on the computer.
+
+# -> $Get-command
+Gets all the commands.
+
+
+
+
+
+##### Navigation #####
+
+
+# -> $Get-Location    OR $pwd
+Prints the current filesystem location.
+
+# -> $Get-ChildItem    OR $ls
+Gets the items and child items in one or more specified locations.
+![alt text](GetChildItems.png)
+
+# -> $Set-Location <location>    OR $cd
+Goes to the pointed location.
+
+
+##### File-Operations #####
+
+# -> $New-item story1.txt
+Creates the file story1.txt.
+
+# -> $echo "Hello world!" > story1.txt
+Appends "Hello world!" to story1.txt.
+
+# -> $Get-Content "C:\users\alex\story1.txt"
+Prints the content of the disignated file.
+
+# -> $Move-Item -Path C:\users\alex\story1.txt -Destination C:\users\alex\story
+Moves "story1.txt" to the "story" folder.
+
+# -> $Copy-Item -Path C:\users\alex\story\story1.txt -Destination C:\users\alex\story\story2.txt
+Copies "story1.txt" and names it as "story2.txt".
+
+# -> $Get-Content "C:\users\alex\story\story1.txt","C:\users\alex\story\story2.txt"
+Displays the content of both source files.
+
+# -> $Move-Item "C:\users\alex\story\story1.txt","C:\users\alex\story\me.txt"
+Renames 1st file into 2nd file.
+
+# -> $Get-Content "C:\users\alex\story\me.txt"
+Displays content of source file.
+
+# -> $Remove-Item -Path "C:\users\alex\story" -Recurse
+Deletes the target folder and it's content (recursive).
+![alt text](Remove-Item.png)
+
+
+
+##### Permissions #####
+
+# -> $New-item story1.txt
+Creates the file story1.txt
+
+# -> $(Get-Acl "C:\users\alex\story1.txt").Owner
+Displays file's owner
+
+# -> $(Get-Acl"C:\users\alex\story1.txt").Group
+Displays file's group.
+
+
+# For the next task I need to get the administrator account enabled using the GUI method.
+
+# -> Press win + x
+![alt text](win+x.png)
+
+# -> Go to Computer management
+![alt text](ComputerManagement.png)
+
+# -> Go to local users and groups
+![alt text](LOcalUsersandGroups.png)
+
+# -> Click on admin propoerties and uncheck "account is disabled"
+![alt text](AdminProperties.png)
+
+Then open PowerShell as administrator and:
+
+# Step 1: Get the current ACL
+# -> $acl = Get-Acl "C:\users\alex\story1.txt"
+
+# Step 2: Set the new owner
+# -> $acl.SetOwner([System.Security.Principal.NTAccount]"Domain\Alice")
+
+# Step 3: Apply the updated ACL
+# -> Set-Acl "C:\path\to\file.txt" $acl
+
+
+
+##### Package Management #####
+
+# -> $FindModule -Name PSWindiwsUpdate
+Checks for module's availability.
+
+# -> $Install-Module -Name PSWindowsUpdate
+Get's the module installed
+
+# We were asked to confirm our request since the source repository for our package needed to be trusted.
+
+![alt text](InstallModule.pgn)
+
+# -> $Get-WindowsUpdate
+Returns an error since this command is a part of the module that was installed but that did not get imported on our session.
+
+# -> $Import-Module PSWindowsUpdate
+Returns also an error: Module cannot be loaded because running scripts is disabeled on this system.
+![alt text](Errors.png)
+
+# We need to change the execution policy
+
+# -> $Get-ExecutionPolicy
+Checks it's current status.
+
+# -> $Set-ExecutionPolicy RemoteSigned
+Changes the execution policy
+![alt-Text](policy.png)
+
+# -> $Get-WindowsUpdate
+And then again.
+
+# -> $Install-WindowsUpdate
+To install the updates.
+
+
+
+##### Environment Variables #####
+
+# -> $echo $env:computername
+Print the computer's name.
+
+# -> $ $env:test = "hello world"
+Creates the variable $test containing value "hello world".
+
+# -> $ $env:test += "becode"
+Appends "becode" to the original variable value.
