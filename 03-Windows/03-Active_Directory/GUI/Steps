@@ -1,0 +1,106 @@
+
+
+
+
+
+########################### DONE 
+
+
+Step-by-Step Guide to Active Directory Setup
+Step 1: Open Server Manager
+
+    Launch Server Manager: After logging into your Windows Server 2022, the Server Manager should open automatically. If it doesn’t, you can find it in the Start menu.
+
+Step 2: Add Roles and Features
+
+    Add Roles and Features: In Server Manager, click on "Manage" in the top right corner, then select "Add Roles and Features."
+    Role-Based or Feature-Based Installation: Click "Next" on the "Before You Begin" page, then select "Role-based or feature-based installation" and click "Next."
+    Select Destination Server: Choose your server from the server pool (it should be the only one listed if you are using a single server) and click "Next."
+
+Step 3: Install Active Directory Domain Services (AD DS)
+
+    Select Server Roles: In the "Select server roles" window, check the box for "Active Directory Domain Services." A dialog box will appear to add required features; click "Add Features."
+    Continue Installation: Click "Next" through the Features page, and then click "Next" again on the AD DS page.
+    Confirmation: Review your selections and click "Install." Wait for the installation to complete, then click "Close."
+
+Step 4: Promote the Server to a Domain Controller
+
+    Promote to Domain Controller: After closing the installation window, you will see a notification flag in Server Manager. Click on it and select "Promote this server to a domain controller."
+    Deployment Configuration: In the "Deployment Configuration" window, select "Add a new forest" and enter a root domain name (e.g., example.local). Click "Next."
+    Domain Controller Options: Set the Forest and Domain functional levels (you can leave them at the default for Windows Server 2022). Enter a Directory Services Restore Mode (DSRM) password and click "Next."
+    DNS Options: If prompted about DNS delegation, you can ignore it for now and click "Next."
+    Additional Options: Review the NetBIOS name (it will be auto-generated based on your domain name) and click "Next."
+    Paths: You can leave the default paths for the database, log files, and SYSVOL, or change them if needed. Click "Next."
+    Review Options: Review your selections and click "Next."
+    Prerequisites Check: The wizard will perform a prerequisites check. If everything is okay, click "Install." The server will restart automatically after the installation.
+
+Step 5: Configure DNS Service
+
+    Open DNS Manager: After the server restarts, open Server Manager again, click on "Tools" in the top right corner, and select "DNS."
+    Verify DNS Functionality: In the DNS Manager, expand your server node and check that the Forward Lookup Zones contain your domain (e.g., example.local). This indicates that DNS is set up correctly.
+
+Step 6: Create Organizational Units (OUs)
+
+    Open Active Directory Users and Computers: In Server Manager, click on "Tools" and select "Active Directory Users and Computers."
+    Create OUs:
+        Right-click on your domain (e.g., example.local), select "New," and then "Organizational Unit."
+        The OU were named "admins" and "standardUsers".
+
+
+
+
+
+############################################ NOT DONE #####
+
+
+
+
+
+        Verify DNS Functionality:
+            Open DNS Manager from Server Manager.
+            Ensure that the Forward Lookup Zones contain your domain (e.g., example.local).
+            Test DNS resolution from the Server VM and Client VMs by pinging the domain.
+
+        Install and Configure DHCP (if required):
+            Open Server Manager, click on "Manage," and select "Add Roles and Features."
+            Follow the wizard to install the DHCP Server role.
+            After installation, open the DHCP management console.
+            Create a new DHCP scope and configure it to assign IP addresses within your network.
+
+    Implement User Management:
+
+        Create User Accounts:
+            If you haven't already, create user accounts for Alice and Bob in Active Directory.
+            Assign them to the appropriate OUs (Organizational Units) and set their permissions.
+
+        Configure Group Policy Objects (GPOs):
+            Open Group Policy Management from Server Manager.
+            Create and configure GPOs for the "admins" and "standardUsers" OUs to enforce security settings and user policies.
+
+    Set Up Sysmon Monitoring:
+
+        Download and Install Sysmon:
+            Download Sysmon from the Sysinternals Suite.
+            Open a command prompt with administrative privileges and navigate to the directory where Sysmon is located.
+            Run the command to install Sysmon with a configuration file (you can use a default configuration or customize it as needed).
+
+        Configure Sysmon:
+            Ensure that Sysmon is logging the necessary events for monitoring system activity.
+            You can use tools like Event Viewer to review the logs generated by Sysmon.
+
+    Test and Validate:
+
+        Log in with Domain Accounts:
+            Log in to the Server VM and Client VMs using the domain accounts (e.g., Alice and Bob) to ensure that permissions and access are functioning as expected.
+
+        Test the Web Application:
+            Access the website hosted on IIS from a Client VM to ensure it is accessible to authorized users.
+
+        Review Sysmon Logs:
+            Check the Sysmon logs in Event Viewer to ensure that system activity is being monitored correctly.
+
+Summary
+
+By following these steps, you will complete the configuration of your secure Windows Server 2022 environment with Active Directory, essential server roles, user management, and Sysmon monitoring. If you have any specific questions about any of these steps or need further assistance, feel free to ask!
+
+
