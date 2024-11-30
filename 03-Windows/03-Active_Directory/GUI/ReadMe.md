@@ -1,8 +1,9 @@
 
 ![alt text](./Pictures/AD.png) 
+Source tutorial:
+https://medium.com/@jzaager/how-to-install-active-directory-for-beginners-windows-server-2019-22920e99aa6c
 
-
-# I/ System preparation
+# I/ System preparation (VM + Windows Server)
 
 For this project, I need to configure 3 virtual machines (client, windows server 2022 and a domain controller) using VirtualBox.
 Since my machine has 8 CPUs and 16GB of RAM, I chose to run only 2 VMs; One for the client and one with the server and domain controller.
@@ -15,117 +16,69 @@ I will allocated ressources as follow:
 
 -> Local Machine: 3CPU, 6GB RAM
 
-# II/ Active Directory setup
+* I'll first install the server VM and then the later on in this setup, the client.
+* In the settings menu of my Server VM, I enable two network interfaces, one in NAT and a second one in Internal network.
 
-## A/ Add Roles and Features
+# II/ Configuring Network Adapters and Setting a static IP address
 
-* Once the installation is done, we get to the main menu of the server manager:
+* Got to "control panel" in the windows search bar and then select "Network and internet", "Network and sharing center", "Change adapter settings".
+* Rename the adapter so then it is clear which one is for the internet and which one is for the intranet.
+![alt text](./Pictures/adapters.png)
+* Then right click on the internal adapter, "properties", "internet protocol version 4", "properties". Then we set up a static IP address and subnet mask. leave the default gateway empty and and enter 127.0.0.1 for "prefered DNS server".
+![alt text](./Pictures/adapter2.png)
+* Back to the windows desktop, roght clik on the windows flag in the low left corner, "system", "rename this pc" and give it a clear name like "Domain Controller". This will restart your VM.
+
+
+# III/ Installing Active Directory Domain Services (AD DS) and Creating a Domain
+
+* From the Server manager dashboard, select "add roles and features". clikc "Next" until reaching a list and carefully select "Active directory domain services" and "add features" on the next window and proceed with the rest of the wizard.
+![alt text](./Pictures/1.png)
+* The click ont he flag and "promote this server to a domain controller", select "Add a new forest" and enter the root domain name you want. It will be "ourserver.local" in this case. Proceed with the rest of the install.
 ![alt text](./Pictures/2.png)
-
-* Then click:
-
-  * Add roles and features
-
-  * Role-based or feature-based installation
-
-
-## B/ Install Active Directory Domain Services (AD DS)
-
-
-* And we select our own server:
+* Now go to "Tools", "Active directory users and computers", right click on your server and select "New", "Organizational Unit".
 ![alt text](./Pictures/3.png)
-
-  * Select server roles
-
-  * Active Directory Domain Services
-
-  * Add features
-
-  * Click next until the instalation sumup
-
-* Click install 
-
+* We create two OU, one called "Admins" and the second called "StandardUsers". Then add Alice in the Admin OU and Bob in the second one.
 ![alt text](./Pictures/4.png)
-
+* Select the "Admins" OU, right click it and go to "properties", "Member of" and hit "Add". Then enter "Domain Admins" and click "Check names", "apply".
+To make sure this step was correctly done, you can logout of current user and try to log in with Alice or one of the new users.
 ![alt text](./Pictures/5.png)
 
 
-## C/ Promote the Server to a Domain Controller
 
-* After closing the install window, go back to the dashboard and click on the flag
+# IV/ Configuring Network Address Translation (NAT)
+-> This will Allow the client VM to connect to the internet through the Domain Controller
+
+* Go to the task manager, "add new roles and features", and go to through the wizard while selecting "remote access" at the first selction screen. 
 ![alt text](./Pictures/6.png)
-An then on "Promote this server to a domain controller"
-
-
-* Int the deployment configuration window 
-  * Add a new forest
-Then enter a root domain name like "example.local" and click next.
+* On the next selection screen make sure to select "Direct access VPN" and "Routing" and proceed to install.
 ![alt text](./Pictures/7.png)
-
-* Leave the values to default but enter a Directory Services Restore Mode password.
-* If prompted about DNS delegation, you can ignore it for now and click Next.
+* Select "Tools", "Routing and remote access" and you should see your domain name in the left pane. Right click it and select "Configure routing and remote access".
 ![alt text](./Pictures/8.png)
-* As the NetBios Domain Name will be auto-generated based on your domain name, you can also click Next.
+* Select "Network address translation NAT" and then "Use this public interface to connect to the internet" and select the network interface that was intenteded for internet connection before clicking "Next".
 ![alt text](./Pictures/9.png)
-* Also click Next for the Path window 
-* Review your selection and click Next
-* The wizard will then make sure that all prerequisites are met and proceed to install.
+* Ignore the firewall related error if so and proceed to install.
 
-## D/ Configure DNS service
-* After completing restart, clik on "Tool" in the top right corner and select DNS.
-* In DNS manager, expand the server node and check if the "forwrd lookup zones" folder contains our domain name (example.local).
-If so, it shows the DNS is configured properly.
+
+# V/ Setting up the Domain Controller as a DHCP server
+-> Allowing the server to pass IP addresses to connected devices automatically.
+
+* Let's go back to the "Add roles and features", select our server and select "DHCP server" in the list to install it.
+* After install, close the "Configure remote access wizard" if such a window pops.
+* There might also be an alert flag on the dash board. If so proceed to every step of the DHCP post-install wizard. 
+* Got to "Tools", "DHCP", unfold the server on the left and right click the "ipv4" section to choose "New scope".
 ![alt text](./Pictures/10.png)
-
-## E/ Create Organizational Units (OU)
-* In Server Manager, click on "Tools" and select "Active Directory Users and Computers"
-* Right-click on our domain name, select "new" and "Organizational Unit"
+* You can name the scope as the ip address range for clarity(192.168.1.11-50), and do not set any IP reservation.
 ![alt text](./Pictures/11.png)
-* Create two OU, one called "Admins" for Alice's profile and a second one called "StandarUsers" for Bob.
-
-## F/ Confirm Domain Membership
-* Navigate to "Settings", "System", "About", "advanced system settings".
-* Under the "Computer name" tab, check for computer name and domain name. If it doesn't contain your example.local, you have to add it.
+* Do not add any exclusion or reserved IP addresses and when asked proceed with standard option "I want to configure these options now".
+For the lease you can leave it untouched but it depends on the business. for a cofee shop, the turnover is much faster so you might want to give it a way lower value tnan 8 days. 
+* Now give the Domain Controller's IP address as the router IP. Click "Add".
+* On the next windows you should see your server's name in the parent domain section, and it's ip address.
 ![alt text](./Pictures/12.png)
+* For the next step you can ignore the WINS server and click "Activate the scope now".
+* Once finisehd, go back to the DHCP window, right click on your domain controller and cick "Authorize" if not already.
 
-## F/ Configure Server Roles
-* Install and configure IIS
-  * Open Server manager. Click on "Manage", "Add roles and features" and follow the wizard to install Web Server IIS role.
-  ![alt text](./Pictures/13.png)
+# VI/ Setting up the Windows Client
+-> Client: 2 CPU, 4GB RAM
+* For this step, you'll have to create a new VM in you Hyperviser. Once it's done and before running it, go to "Settings", "General", "Advanced", and click to set "Shared clipboard" and "Drag'n'drop" as Bidirectional.
+* Also, remember to set the network adapter as "Internal network", so then it can connect to the domain, use it as a DNS and get an IP assigned by DHCP.
 
-# III/ Connecting Client and Server
-
-## A/ Connect VMs
-
-* Start both VMs.
-* in cmd, run the following command:
-  * -> ipconfig
-  ![alt text](./Pictures/server.png)
-* Check if both internal adapter (both VMs should have one) are on same subnet.
-* Try to ping the server with the client.
-  ![alt text](./Pictures/client.png)
-Vms are connected.
-
-## D/ Setup static IP for server's internal network adapter
-* Go to "Control panel", "Network and internet", "Network and sharing center", "Change adapter settings".
-* Right click on the internal network interface (ethernet 2 in this case)and select "Properties".
-* select "internet protocol version 4", and click "Properties".
-* 
-
-
-## C/ Setup DHCP on server
-* From the Server Manager dashboard go to "Manage", "Add roles and features", "Role based or feature based installation".
-* Then select DHCP in the list and proceed to installation.
-![alt text](./Pictures/14.png)
-* Now let's configure the DHCP. In the server manager, click on the DHCP on the left. Then right click on the server and choose "DHCP manager".
-![alt text](./Pictures/15.png)
-![alt text](./Pictures/16.png)
-* From this point unfold the server on the left, click on "ipv4" and on the right of the window click on "more actions". Then select "New scope".
-![alt text](./Pictures/17.png)
-* In the wizard, I call it "ClientNetwork".
-
-
-
-
-# IV/ Join Client VM to the Domain
-* So now we will take the same steps already taken at II/F with the server but on the client VM.
