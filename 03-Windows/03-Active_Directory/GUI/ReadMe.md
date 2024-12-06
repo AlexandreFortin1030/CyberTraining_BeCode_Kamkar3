@@ -80,5 +80,21 @@ For the lease you can leave it untouched but it depends on the business. for a c
 # VI/ Setting up the Windows Client
 -> Client: 2 CPU, 4GB RAM
 * For this step, you'll have to create a new VM in you Hyperviser. Once it's done and before running it, go to "Settings", "General", "Advanced", and click to set "Shared clipboard" and "Drag'n'drop" as Bidirectional.
+![alt text](./Pictures/13.png)
 * Also, remember to set the network adapter as "Internal network", so then it can connect to the domain, use it as a DNS and get an IP assigned by DHCP.
 
+# VII/ Installing Windows 10
+* Chose the custom install.
+![alt text](./Pictures/14.png)
+* Go through the wizard and wait for it to complete.
+* Once completed go tot he desktop and launch the CMD to use the "ifconfig" command and check if the client's IP address is withing the server's scope and if the domain name is mentioned.
+![alt text](./Pictures/15.png)
+* Now we can test if the DNS is functioning by using the "ping" command to a website.
+
+# VIII/ Renaming the Windows 10 Client and Joining the Domain
+* Right click the windows button and select "System", scroll down and click "rename this PC (advanced)". Chnage the member of section to "Domain" and enter domain name.
+![alt text](./Pictures/16.png)
+* Next enter a user name (Administrator) and password.
+![alt text](./Pictures/17.png)
+* Restart your VM.
+* You should now be able to log in using another user from your Client VM.
