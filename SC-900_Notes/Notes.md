@@ -117,7 +117,30 @@ Defence in depth uses a layered approach to security, so then if one of these la
 * distrubuting critical tasks and rsponsabilities in a way that prevent conflicts of interest and fraud
 
 #### Authentication and authorization
+* Authentication is verifying the identity of a user, system or entity trying to access a ressource. it can be based on something you know, something you have, something you are.
 
+* Authorization is the process of granting or denying permissions or priviledges to and authenticated user or entity.
+
+## B/ Zero trust architecture:
+-> Identity is a key part of implmenting a zero trucst architecture and building a perimeter far any IT environnement.
+![My Local Image](./Pictures/5.pgn)
+
+#### Why Identity as a perimeter?
+In modern IT environments, especially since the rise of cloud services and remote work, the traditional security perimeter (doors, firewalls etc) is no longer the go to. Instead security nowadays revolves around  verifying and managing the identity of users, devices and applications attempting to access ressources, regardless of their physical location.
+
+#### Differences with traditionnal architectures:
+![My Local Image](./Pictures/6.pgn)
+
+#### Identity used ti implement zero trust architecture:
+* In a zero trust architecture, the fundamental principle is to nerver automatically trust any entity, regardless of wether it is inside or outside the network perimeter. This involves verifying their digital identity through methods such as username/password combo, MFA, biometrics and other strong authentication methods.
+
+## C/ Capabilities :
+-> Core tools and capabilities used in identity security
+![My Local Image](./Pictures/7.pgn)
+#### Directory service
+A directory service is a database that stores and manages information about network ressources including users, groups, devices, apps... It is used as a central repository of identity and access related data. It provides a foundation for Identity and Access Management solutions (IAM).
+Key featurures:
+* User authentication:  
 
 
 
