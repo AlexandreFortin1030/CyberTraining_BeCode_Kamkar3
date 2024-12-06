@@ -140,13 +140,32 @@ In modern IT environments, especially since the rise of cloud services and remot
 #### Directory service
 A directory service is a database that stores and manages information about network ressources including users, groups, devices, apps... It is used as a central repository of identity and access related data. It provides a foundation for Identity and Access Management solutions (IAM).
 Key featurures:
-* User authentication:  
+* User authentication: Directory services validate user credentials to ensure only authorized users can access the networks and its ressources.
+* User Authorization: Determines the level of access each user has according to their roles, group membership and other attributes.
+* Group management: Permissions can be assigned to groups rather that only to individual users.
+* Password policies: Enforcing password complexity and expiration rules.
+* Single Sign-on(SSO):Enables users to access multple applications and services through a single set of credentials.
+* Centralized user management
+* Auditing and logging
 
-
-
+#### Capabilities that can be used to secure identities?
+* MFA
+* Single Sign-on (SSO): reduces the risk of managing multiple passwords.
+* Role based access control: Users are granted access based on their roles within an organization.
+* Adaptive authentication: Adjusts dynamically the level of authentication required based on the user behavior, location, device etc.
+* Biometric authentication
+* Priviledged Access Management: Focuses on securing access to critical systems and data with Just-In-Time access and session monitoring.
+* Behaviorale Analitycs: Monitors user behavior and establishes baseline patters. Deviation from the norm can trigger alerts for further inverstigations.
 
 
 ## III/ Networking
+
+
+
+
+
+
+
 ## IV/ SecOps
 ## V/  AppSec
 ## VI/ Infrastucture security
