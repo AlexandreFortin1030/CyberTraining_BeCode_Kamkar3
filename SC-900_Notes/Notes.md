@@ -184,23 +184,39 @@ The OSI model is a conceptual framework that standardizes the fucntions of a com
 * Connectionless protocol that provides faster data transfert but does not provide the same level of reliability as TCP. No formal connexion before sending data, no ACK or retransmission mechanism.
 
 ## D/ Port numbers
-* An unsigned (0 or +) integer used to diffrentiate in between different services or applications thta are running on a single device within a network.
+* An unsigned integer used to diffrentiate in between different services or applications that are running on a single device within a network. Ports help route incoming data to the appropriate application.
 
+## E/ Encryption
+#### At rest:
+Involves encrypting data that is stored on a device, servers, or storage systems. Even if an attacker gains physical access to the storage media, they cannot acces the adata without the encryption key.
 
-
-
-
-
-
-
-
-
-
-
-
+#### In transit:
+Involves encrypting data as it travels in between devices or over networks. This prevents eavesdropping (interception). Common protocols are https, TLS/SSL.
 
 
 ## IV/ SecOps
+-> A team devoted to the task of protecting the CIA of an organization's assets.
+#### Different forms it can take:
+
+* Security Operation Center (SOC): Central team monitoring, analysing, and ready to respond to security events 24/7.
+
+* Incident response team: specialized team dedicated to responding to security incidents and breaches.
+
+* Threat hunting: a team that searches for advanced threats and hidden vulnerabilities that may not be detected by standard tools.
+
+* Red/Blue team
+
+* Managed Security Services Provider: SOme companies outsource security task to third-party providers specialized in security mnitoring and incident response.
+
+#### How it differs from traditionnal IT operations:
+* Focus: SecOps are dedicated to security and not managing all aspects of the IT echosstem. 
+* skillset: SecOPs requires very specific skills
+
+
+
+
+
+
 ## V/  AppSec
 ## VI/ Infrastucture security
 ## VII/ Data security
