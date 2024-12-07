@@ -136,7 +136,7 @@ In modern IT environments, especially since the rise of cloud services and remot
 
 ## C/ Capabilities :
 -> Core tools and capabilities used in identity security
-![My Local Image](./Pictures/7.pgn)
+![My Local Image](./Pictures/7.png)
 #### Directory service
 A directory service is a database that stores and manages information about network ressources including users, groups, devices, apps... It is used as a central repository of identity and access related data. It provides a foundation for Identity and Access Management solutions (IAM).
 Key featurures:
@@ -152,15 +152,25 @@ Key featurures:
 * MFA
 * Single Sign-on (SSO): reduces the risk of managing multiple passwords.
 * Role based access control: Users are granted access based on their roles within an organization.
-* Adaptive authentication: Adjusts dynamically the level of authentication required based on the user behavior, location, device etc.
+* Adaptive authentication: Adjusts dynamically the level of authentication required based on the user's behavior, location, device etc.
 * Biometric authentication
 * Priviledged Access Management: Focuses on securing access to critical systems and data with Just-In-Time access and session monitoring.
-* Behaviorale Analitycs: Monitors user behavior and establishes baseline patters. Deviation from the norm can trigger alerts for further inverstigations.
+* Behavioral Analitycs: Monitors user's behavior and establishes baseline patterns. Deviation from the norm can trigger alerts for further inverstigations.
 
 
 ## III/ Networking
 
-
+#### IP addressing.
+Numerical value assigned to every computer connected to a network and using the internet protocol.
+#### OSI Model
+1. Physical layer
+2. Data link layer
+3. Network layer
+4. Transport layer
+5. Session layer
+6. Presentation layer
+7. Application layer
+![My Local Image](./Pictures/8.png)
 
 
 
