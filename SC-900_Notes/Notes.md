@@ -160,9 +160,10 @@ Key featurures:
 
 ## III/ Networking
 
-#### IP addressing.
+## A/ IP addressing.
 Numerical value assigned to every computer connected to a network and using the internet protocol.
-#### OSI Model
+## B/ OSI Model
+The OSI model is a conceptual framework that standardizes the fucntions of a communication system into seven disctinct layers.
 1. Physical layer
 2. Data link layer
 3. Network layer
@@ -171,6 +172,29 @@ Numerical value assigned to every computer connected to a network and using the 
 6. Presentation layer
 7. Application layer
 ![My Local Image](./Pictures/8.png)
+
+
+## C/ TCP/UDP
+-> Two fundamental transport layer protocol (4).
+
+#### TCP - Transmission Control Protocol
+* Connection oriented protocol that provides reliable and ordered data delivery between devices. (3 way handshake, segmentation and reassembly, retransmission, ACK...)
+
+#### UDP - User Datagram Protocol
+* Connectionless protocol that provides faster data transfert but does not provide the same level of reliability as TCP. No formal connexion before sending data, no ACK or retransmission mechanism.
+
+## D/ Port numbers
+* An unsigned (0 or +) integer used to diffrentiate in between different services or applications thta are running on a single device within a network.
+
+
+
+
+
+
+
+
+
+
 
 
 
