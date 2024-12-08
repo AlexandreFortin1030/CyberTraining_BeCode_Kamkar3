@@ -206,18 +206,77 @@ Involves encrypting data as it travels in between devices or over networks. This
 
 * Red/Blue team
 
-* Managed Security Services Provider: SOme companies outsource security task to third-party providers specialized in security mnitoring and incident response.
+* Managed Security Services Provider: Some companies outsource security task to third-party providers specialized in security mnitoring and incident response.
 
 #### How it differs from traditionnal IT operations:
-* Focus: SecOps are dedicated to security and not managing all aspects of the IT echosstem. 
-* skillset: SecOPs requires very specific skills
 
+* Focus: SecOps are dedicated to security and not managing all aspects of the IT ecosytem. 
 
+* Skillset: SecOps requires very specific skills
 
-
+![My Local Image](./Pictures/9.png)
 
 
 ## V/  AppSec
+-> Refers to the practice of protecting software applications from security threats, vulnerabilities and attacks. It encompasses the processes, techniques, and tools used to identify mitigate and prevent security risks throughout the development, deployment and maintenance life cycle of an application.
+
+## A/ Some key concepts:
+
+* Secure by design
+* Input validation/sanitization
+* Output encoding
+* Authentication and authorization
+* Data protection
+* Secure dependencies
+* Security testing
+
+
+## B/ Key capabilities and tools:
+-> Application security key capabilities and tools are essential for identifying, mitigating and preventing security vulnerabilities and threats.
+![My Local Image](./Pictures/12.png)
+
+* Static Application Security Testing:
+Analyses source code to identify security vulnerabilitie in the app's codebase.
+
+* Dynamic Application Security testing:
+Scans a running app by sending input requests and analyzing responses.
+
+* Interactice Application Security testing:
+Combo of both previous to nalyse the app during runtime.
+
+* Runtime Application Security testing:
+Monitors and protects app in real-time, detecting and responding to security threats as they occur.
+
+* Penetration testing
+Real world attack simulations to discover vulnerability and train.
+
+
 ## VI/ Infrastucture security
+-> Infrastructures refers here to the foundational components that support the operation and management of IT services and applications. It includes physical ressources such as servers and networking equipment as well as virtual ressources like cloud services (azure or AWS) and containers (Docker, Kubernetes).
+![My Local Image](./Pictures/10.png)
+
+
+## A/ Key concepts:
+![My Local Image](./Pictures/11.png)
+
+#### Security hygiene
+-> A set of practices and behaviors to follow that aims to maintain good cybersecurity habits.
+![My Local Image](./Pictures/13.png)
+
+
+
+
+## B/ Capabilities and tools:
+
+
+
+
+
+
+
+
+
+
+
 ## VII/ Data security
 ## VIII/ AI security
