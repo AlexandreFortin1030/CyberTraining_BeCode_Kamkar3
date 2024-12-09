@@ -315,8 +315,38 @@ Controlling who can access and modify containers by impementing role-based acces
 
 
 ## VII/ Data security
+-> Data security is the practice of protecting digital data (databases, files etc) from unauthorized access, disclosure, alteration etc...
+
+![My Local Image](./Pictures/16.png)
+
 ## A/ Key concepts
 
-## B/ 
-## C/
+#### Data classification
+Is a process that aims to classify data according to it's level of sensitivity. It helps understand which data should benefit from higher level of care and protection.
+ex: Public, Internal, Confidential, restricted, etc. 
+
+#### Data lifecycle management
+Is a strctured approach to managin data through it's entire lifecycle. From it's creation, storage, eventual processing, archival and deletion. It involves defining relevant policies and procedures according to the current stage of data's life cycle.
+
+![My Local Image](./Pictures/17.png)
+
+
+#### Data Loss Prevention (DLP)
+DLP uses content inspection and contextual analysis to monitor and control data in motion, at rest or in use. It aims to identify and block or encrypt sensitive data to prevent data breaches or leakages.
+
+#### Why is data security important for an organization ?
+
+![My Local Image](./Pictures/18.png)
+
+* Protection of sensistive information
+* Prevention of data breaches
+* Preservation of trust (from customers and stakeholders)
+* Protection against insider threats
+
+
+## B/ Data security capabilities
+
+
+
+
 ## VIII/ AI security
