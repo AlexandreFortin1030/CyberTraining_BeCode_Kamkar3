@@ -6,7 +6,9 @@
 ## A/ Shared responsability model
 In organization that are using cloud based services, the responsability of securing data access is shared between the company and the cloud provider. On the contrary, copanies that are running their own hardware are 100% reponsible for their own security and compliance.
 The shared security model shows what aspects of these responsabilities are held by the client and which by the service provider.Obviously, this depends on the kind of service that is being provided:
+
 ![My Local Image](./Pictures/1.png)
+
 SaaS: Software as a service;
 PaaS: Platform as a Service
 IaaS: Infrastucture as a service
@@ -18,10 +20,12 @@ Defence in depth uses a layered approach to security, so then if one of these la
 ![My Local Image](./Pictures/2.png)
 
 * CIA triangle
-![My Local Image](./Pictures/3.png)
+
 * Confidentiality, is keeping the data confidential.
 * Integrity, is keeping the data unchanged or unaltered, making sure it remains as it is since the begining.
 * Availability, refers to data being available or accessible whenever needed.
+
+![My Local Image](./Pictures/3.png)
 
 ->Non repudiation: It ensures that no party can deny that it sent or received a message.
 
@@ -49,6 +53,7 @@ Defence in depth uses a layered approach to security, so then if one of these la
 * Understanding Adversarial Behavior.
 * Plan and implement defence strategies.
 * Incident response and threat hunting.
+
 ![My Local Image](./Pictures/4.jpeg)
 
 
@@ -123,19 +128,22 @@ Defence in depth uses a layered approach to security, so then if one of these la
 
 ## B/ Zero trust architecture:
 -> Identity is a key part of implmenting a zero trucst architecture and building a perimeter far any IT environnement.
-![My Local Image](./Pictures/5.pgn)
+
+![My Local Image](./Pictures/5.png)
 
 #### Why Identity as a perimeter?
 In modern IT environments, especially since the rise of cloud services and remote work, the traditional security perimeter (doors, firewalls etc) is no longer the go to. Instead security nowadays revolves around  verifying and managing the identity of users, devices and applications attempting to access ressources, regardless of their physical location.
 
 #### Differences with traditionnal architectures:
-![My Local Image](./Pictures/6.pgn)
+
+![My Local Image](./Pictures/6.png)
 
 #### Identity used ti implement zero trust architecture:
 * In a zero trust architecture, the fundamental principle is to nerver automatically trust any entity, regardless of wether it is inside or outside the network perimeter. This involves verifying their digital identity through methods such as username/password combo, MFA, biometrics and other strong authentication methods.
 
 ## C/ Capabilities :
--> Core tools and capabilities used in identity security
+-> Core tools and capabilities used in identity security.
+
 ![My Local Image](./Pictures/7.png)
 #### Directory service
 A directory service is a database that stores and manages information about network ressources including users, groups, devices, apps... It is used as a central repository of identity and access related data. It provides a foundation for Identity and Access Management solutions (IAM).
@@ -171,6 +179,7 @@ The OSI model is a conceptual framework that standardizes the fucntions of a com
 5. Session layer
 6. Presentation layer
 7. Application layer
+
 ![My Local Image](./Pictures/8.png)
 
 
@@ -233,6 +242,7 @@ Involves encrypting data as it travels in between devices or over networks. This
 
 ## B/ Key capabilities and tools:
 -> Application security key capabilities and tools are essential for identifying, mitigating and preventing security vulnerabilities and threats.
+
 ![My Local Image](./Pictures/12.png)
 
 * Static Application Security Testing:
@@ -299,7 +309,9 @@ Controlling who can access and modify containers by impementing role-based acces
 ![My Local Image](./Pictures/15.png)
 
 
-
-
 ## VII/ Data security
+## A/ Key concepts
+
+## B/ 
+## C/
 ## VIII/ AI security
