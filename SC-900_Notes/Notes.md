@@ -263,17 +263,40 @@ Real world attack simulations to discover vulnerability and train.
 -> A set of practices and behaviors to follow that aims to maintain good cybersecurity habits.
 ![My Local Image](./Pictures/13.png)
 
+#### Security posture management
+-> Refers to the practice of Assessing an organization's cyber security posture (overall approach and readiness to protect its assets from cyber threats and maintain its confidentiality, availability and integrity).
 
+#### Patching
+-> Refers to the process of applying software updates.
 
+#### What are containers
+->Containers are a form of lightweight and executable software package that contains everything needed to run a piece of software. It provides a conssistent and isolated evironement for application. Making it easier to develop, package and deploy software accross different environments and platforms. Container security is crutial because they introduce potential security challenges.
+![My Local Image](./Pictures/14.png)
+
+*  Image security:
+Ensuring that container images are free from vulnerability.
+
+* Runtime security:
+Protecting running containers through isolation and monitoring to prevent unauthorized access and attacks.
+
+* Access control:
+Controlling who can access and modify containers by impementing role-based access control and identity management.
 
 ## B/ Capabilities and tools:
 
+#### What is Vulnerability Management?
+-> Vulnerability management is a systematic process of identifying, evaluating, priorizing, mitigating and monitoring vulnerabilities in computer systems, software, network and infrastructure.
 
+#### What is CSPM ?
+-> Cloud Security Posture Management is a set of tools, processes and practices designed to assess, monitor and enforce security configurations and best practices in cloud environment.
+* Configuration assessement
+* Security policy enforcement
+* Continuous monitoring
+* Compliance reporting 
 
-
-
-
-
+#### What is CNAPP ?
+-> Cloud-Native Application Protection Platform.It is an all included cloud-native software platform that simplifies monitoring, detecting and acting on potential security threats and vulnerabilities.
+![My Local Image](./Pictures/15.png)
 
 
 
