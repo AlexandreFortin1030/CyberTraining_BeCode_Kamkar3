@@ -9,7 +9,7 @@ The shared security model shows what aspects of these responsabilities are held 
 
 ![My Local Image](./Pictures/1.png)
 
-SaaS: Software as a service;
+SaaS: Software as a service
 PaaS: Platform as a Service
 IaaS: Infrastucture as a service
 On-premises datacenter : Hardware is localy managed.
@@ -19,7 +19,7 @@ Defence in depth uses a layered approach to security, so then if one of these la
 
 ![My Local Image](./Pictures/2.png)
 
-* CIA triangle
+#### CIA triangle
 
 * Confidentiality, is keeping the data confidential.
 * Integrity, is keeping the data unchanged or unaltered, making sure it remains as it is since the begining.
@@ -40,11 +40,10 @@ Defence in depth uses a layered approach to security, so then if one of these la
    * Strict access control: based on context (user roles, device health, network location)
 
 ## D/ Common  threats
-* Threat = Any potential danger.
--> Phising
--> Malware
--> SQL injection
--> XSS ...
+* Threat = Any potential danger:
+
+    Phising, Malware, SQL injection, XSS ...
+
 * Vulnerability = A soft/weak spot in the defence infrastructure.
 * Risk = Threat combined with vulnerability.
 
@@ -107,6 +106,7 @@ Defence in depth uses a layered approach to security, so then if one of these la
 * Security guideline: A document that deals with "grey area" when no standards apply to a specific situation.
 * Security procedure: A detailed step by step guide of actions to apply.
 * Laws and regulations: legal security frameworks established by governments and regulatory bodies.
+
 
 
 ## II/ IAM 
