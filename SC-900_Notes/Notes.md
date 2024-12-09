@@ -263,14 +263,17 @@ Real world attack simulations to discover vulnerability and train.
 
 ## VI/ Infrastucture security
 -> Infrastructures refers here to the foundational components that support the operation and management of IT services and applications. It includes physical ressources such as servers and networking equipment as well as virtual ressources like cloud services (azure or AWS) and containers (Docker, Kubernetes).
+
 ![My Local Image](./Pictures/10.png)
 
 
 ## A/ Key concepts:
+
 ![My Local Image](./Pictures/11.png)
 
 #### Security hygiene
 -> A set of practices and behaviors to follow that aims to maintain good cybersecurity habits.
+
 ![My Local Image](./Pictures/13.png)
 
 #### Security posture management
@@ -281,6 +284,7 @@ Real world attack simulations to discover vulnerability and train.
 
 #### What are containers
 ->Containers are a form of lightweight and executable software package that contains everything needed to run a piece of software. It provides a conssistent and isolated evironement for application. Making it easier to develop, package and deploy software accross different environments and platforms. Container security is crutial because they introduce potential security challenges.
+
 ![My Local Image](./Pictures/14.png)
 
 *  Image security:
@@ -306,6 +310,7 @@ Controlling who can access and modify containers by impementing role-based acces
 
 #### What is CNAPP ?
 -> Cloud-Native Application Protection Platform.It is an all included cloud-native software platform that simplifies monitoring, detecting and acting on potential security threats and vulnerabilities.
+
 ![My Local Image](./Pictures/15.png)
 
 
