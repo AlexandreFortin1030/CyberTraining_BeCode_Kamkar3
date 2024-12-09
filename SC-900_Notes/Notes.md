@@ -346,7 +346,47 @@ DLP uses content inspection and contextual analysis to monitor and control data 
 
 ## B/ Data security capabilities
 
+#### Data loss prevention tooling
+Tools to prevent unauthorized access, sharing, leakage of sensitive or confidential data. These tools use content inspection, policy enforcement, and monitoring to identify and protect sensitive data.
+* Symantec Data Loss Prevention
+* McAfee total protect for Data Loss Prevention
+* etc...
 
+#### Insider risk managemnt tooling
+This kind of tools focus on risks posed by employees, contractors or partners. These tools monitor user behavior, access paterns and data usage to detect suspicious activities.
 
+#### Data retention tooling
+Softwares and solutions to manage the retention (keeping the data) and deletion of data according to organization's policy.
 
 ## VIII/ AI security
+
+## A/ Key concepts
+
+#### Differencies with traditional cyber security
+-> Securing AI systems presents unique challenges compared to traditional cybersecurity.
+
+![My Local Image](./Pictures/19.png)
+
+
+* Data integrity: As AI heavily rely on data for learning it is crucial that the data used is check for integrity.
+
+* Model security: The Ai decision model itself can be a target for malicious actors.
+
+* Attach surface: AI systems often have broader attack surfaces compared to traditions systems.
+
+* Ethical considerations: Making sure that Ai is not used for illegal or unethical tasks and projects.
+
+
+Overall, securing AI systems require a different approach that takes into accoutn the unique aspects of AI technology.
+
+#### Similarities with securing traditional systems
+-> Nonetheless, securing Ai systems share some similarites with traditional approaches.
+
+![My Local Image](./Pictures/20.png)
+
+* Threat protection: Both types of systems need to be safeguarded against unauthorized accesses, data modification and destruction.
+
+* Vulnerability management
+
+* Data breaches
+
