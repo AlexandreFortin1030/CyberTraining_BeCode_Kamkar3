@@ -1,5 +1,8 @@
 # Notes for SC-900 Certification
 
+![My Local Image](./Pictures/0.png)
+
+
 ## I/ Describe Security and Compliance Concepts
 -> Intro: As more and more businesses data is accessed from outside of the primary coporate network, security and compliance have become increasingly important.
 
