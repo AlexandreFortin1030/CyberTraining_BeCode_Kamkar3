@@ -393,3 +393,51 @@ Overall, securing AI systems require a different approach that takes into accout
 
 * Data breaches
 
+These similarities show that AI systems require a blend of traditional as well as specialised approaches to mensure robust protection.
+
+## B/ AI security capabilities
+
+![My Local Image](./Pictures/21.png)
+
+#### What tools do we have?
+
+* Counterfit: Open-source automation tool for AI that hepls conduct risk assessements and check robustness of algorithms.
+* AI security tollkit
+* Collaborative platforms.
+
+The elababoration of such tools is part of a growing field.
+
+#### AI Red teaming
+-> AI red teaming differs from traditional red teaming in several key aspects:
+* Specifically targets the unique vulnerabilities of Ai such as machine elarning models and data pipelines.
+* Testing AI behavior
+* Prompt injection and content generation
+
+
+## C/ Responsible AI
+
+![My Local Image](./Pictures/22.png)
+
+#### What is responsible AI?
+-> It refers to the development of AI in a way that is ethical, transparent and aligns with societal values. It aims at ensuring AI systems are designed and operated to benefit individuals, communities and society as a whole.
+
+* Ethical considerations
+* Robustness and reliability
+* Transparency
+* Accountability
+
+#### How can I be sure my AI system is secure and ethical ?
+-> It involves a "multi-faceted" approach:
+
+* Follow established ethicald guidelines
+* Implement robust security measures
+* Maintain data privacy
+* Stay informed on AI safety
+* Comply with regulations
+
+#### Examples of security issues cuased by unethical use of AI
+
+* AI in judicial systems
+* Manipulation of AI systems: Ai can be susceptibl to adversarial attacks (autonomous vehicules could be misled)
+* AI powered surveillance: privacy violation... 
+
