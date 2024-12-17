@@ -2,6 +2,8 @@
 
 ![My Local Image](./Pictures/0.png)
 
+# Part 1:
+
 
 ## I/ Describe Security and Compliance Concepts
 -> Intro: As more and more businesses data is accessed from outside of the primary coporate network, security and compliance have become increasingly important.
@@ -440,4 +442,62 @@ The elaboration of such tools is part of a growing field.
 * AI in judicial systems
 * Manipulation of AI systems: Ai can be susceptibl to adversarial attacks (autonomous vehicules could be misled)
 * AI powered surveillance: privacy violation... 
+
+
+
+# Part 2: Microsoft Security, Compliance, and Identity Fundamentals
+
+
+
+# I/ Introduction
+
+## A/ Introduction to general security concepts
+
+* Encryption:
+   * Process of using an ecryption algorythm to encrypt data. The data is then decrypted when needed to be accessed. We must distinguish symetric (one key) and asymetric (public and private key) encryption.
+* Hashing:
+   * Used a lot to store passwords. the entered password is passed through a hash function (SHA-256...) and the output is saved in a database. Whenever a user logs in the password entered is passed through the same hasing algo and both hashes are compared. This ensures the if the database is hacked, the password are unusable, since it is not possible to get back to the originla password with the hash. It is "unidirectional".
+
+## B/ Governance, Risk and Compliance
+![My Local Image](./Pictures/23.png)
+
+* Governance:
+   * Is the system of rules, practices and procedures an organization uses to direct and control its activities.
+* Risk :
+   * Risk management is the process of identifying, assessing, and responding to threats that could have a negative impact on the organization and its interests.
+* Compliance:
+   * Refers to the legal context and regulations that a companu must follow. Data privacy(transparency about data being collected, used etc), Data sovereignity(Data is subject of laws and regulations where it is collected, held and used)...
+
+
+# II/ Capabilities of Microsoft Entra ID
+-> When it comes to security, organizations can no longer rely on their network boundary. To all employees, partners and customers to collaborate securely, organizations need to shift to an approach where identity becomes the new security perimeter. Using an identity provider helps them manage that shift and all the aspects of identity security.
+
+## A/ Describe Microsoft Entra ID
+
+Formerly called Azure active directory, is Microsoft's cloud-based identity and access management service (IAM). It is used by organizations to enable their employees, guests and so on to sign in and access the ressources they need. It simlifies the way organizzations manage authorization and access by providing a single identity system for their cloud and on-premises applications.
+![My Local Image](./Pictures/24.png)
+
+#### Identity Secure Score
+-> Microsoft Entra ID provides an Identity Secure Score to help assess how aligned the company is with Microsoft best security practices.
+
+#### Basic terminology
+* Tenant: A Microsoft Entra ID instance in which infos about a single organization resides.
+* Directory: A database or catalog of identities and ressources associated with a "Tenant".
+
+#### Who uses Microsoft Entra ID?
+-> It is used by IT admins to control access to corporate apps and ressources based on buisiness requirements.
+
+
+## B/ Describe types of identities
+-> In Microsoft Entra ID, there are different types of identities that are supported.
+* User identities 
+* Workload identities
+* Device identities
+* External identities
+* Hybrid identities
+
+But to what can I assign an identity??
+* To people
+* To physical devices
+* To Software-based objects (VMs, apps, containers etc.)
 
