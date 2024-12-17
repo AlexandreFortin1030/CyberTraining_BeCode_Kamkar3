@@ -12,10 +12,10 @@ The shared security model shows what aspects of these responsabilities are held 
 
 ![My Local Image](./Pictures/1.png)
 
-SaaS: Software as a service
-PaaS: Platform as a Service
-IaaS: Infrastucture as a service
-On-premises datacenter : Hardware is localy managed.
+* SaaS: Software as a service
+* PaaS: Platform as a Service
+* IaaS: Infrastucture as a service
+* On-premises datacenter : Hardware is localy managed.
 
 ## B/ Describe defence in depth 
 Defence in depth uses a layered approach to security, so then if one of these layers is breached, there's the next one to slow down or stop the attacker. 
@@ -91,7 +91,7 @@ Defence in depth uses a layered approach to security, so then if one of these la
 
 * Legal and regulatory controls:
    * Data protection regulations
-   * Industry-specific standrads
+   * Industry-specific standards
 
 #### Assessing security risks
 * Identify Assets and threats
@@ -104,7 +104,7 @@ Defence in depth uses a layered approach to security, so then if one of these la
 
 ## F/ Security practices and documentation
 * Security policy: A high-level document that outlines an organizations security goals, principles and guidelines.
-* Security standards: A more detailed and specific document that provides guidelines and requirement for implementing security comtrols and measures within an organization.
+* Security standards: A more detailed and specific document that provides guidelines and requirement for implementing security controls and measures within an organization.
 * Security baseline: A set of minimum security config that is considered essential for a particular system.
 * Security guideline: A document that deals with "grey area" when no standards apply to a specific situation.
 * Security procedure: A detailed step by step guide of actions to apply.
@@ -122,15 +122,15 @@ Defence in depth uses a layered approach to security, so then if one of these la
 * Granting users and systems only the minimum priviledges necessary to perform the tasks they are intended to.
 
 #### Segregation of duties
-* distrubuting critical tasks and rsponsabilities in a way that prevent conflicts of interest and fraud
+* distrubuting critical tasks and responsabilities in a way that prevent conflicts of interest and fraud.
 
 #### Authentication and authorization
 * Authentication is verifying the identity of a user, system or entity trying to access a ressource. it can be based on something you know, something you have, something you are.
 
-* Authorization is the process of granting or denying permissions or priviledges to and authenticated user or entity.
+* Authorization is the process of granting or denying permissions or priviledges to an authenticated user or entity.
 
 ## B/ Zero trust architecture:
--> Identity is a key part of implmenting a zero trucst architecture and building a perimeter far any IT environnement.
+-> Identity is a key part of implementing a zero trust architecture and building a perimeter far any IT environnement.
 
 ![My Local Image](./Pictures/5.png)
 
@@ -141,7 +141,7 @@ In modern IT environments, especially since the rise of cloud services and remot
 
 ![My Local Image](./Pictures/6.png)
 
-#### Identity used ti implement zero trust architecture:
+#### Identity used to implement zero trust architecture:
 * In a zero trust architecture, the fundamental principle is to nerver automatically trust any entity, regardless of wether it is inside or outside the network perimeter. This involves verifying their digital identity through methods such as username/password combo, MFA, biometrics and other strong authentication methods.
 
 ## C/ Capabilities :
@@ -155,7 +155,7 @@ Key featurures:
 * User Authorization: Determines the level of access each user has according to their roles, group membership and other attributes.
 * Group management: Permissions can be assigned to groups rather that only to individual users.
 * Password policies: Enforcing password complexity and expiration rules.
-* Single Sign-on(SSO):Enables users to access multple applications and services through a single set of credentials.
+* Single Sign-on(SSO):Enables users to access multiple applications and services through a single set of credentials.
 * Centralized user management
 * Auditing and logging
 
@@ -174,7 +174,7 @@ Key featurures:
 ## A/ IP addressing.
 Numerical value assigned to every computer connected to a network and using the internet protocol.
 ## B/ OSI Model
-The OSI model is a conceptual framework that standardizes the fucntions of a communication system into seven disctinct layers.
+The OSI model is a conceptual framework that standardizes the functions of a communication system into seven distinct layers.
 1. Physical layer
 2. Data link layer
 3. Network layer
@@ -254,13 +254,13 @@ Analyses source code to identify security vulnerabilitie in the app's codebase.
 * Dynamic Application Security testing:
 Scans a running app by sending input requests and analyzing responses.
 
-* Interactice Application Security testing:
+* Interactive Application Security testing:
 Combo of both previous to nalyse the app during runtime.
 
 * Runtime Application Security testing:
 Monitors and protects app in real-time, detecting and responding to security threats as they occur.
 
-* Penetration testing
+* Penetration testing:
 Real world attack simulations to discover vulnerability and train.
 
 
@@ -312,7 +312,7 @@ Controlling who can access and modify containers by impementing role-based acces
 * Compliance reporting 
 
 #### What is CNAPP ?
--> Cloud-Native Application Protection Platform.It is an all included cloud-native software platform that simplifies monitoring, detecting and acting on potential security threats and vulnerabilities.
+-> Cloud-Native Application Protection Platform. It is an all included cloud-native software platform that simplifies monitoring, detecting and acting on potential security threats and vulnerabilities.
 
 ![My Local Image](./Pictures/15.png)
 
@@ -375,7 +375,7 @@ Softwares and solutions to manage the retention (keeping the data) and deletion 
 
 * Model security: The Ai decision model itself can be a target for malicious actors.
 
-* Attach surface: AI systems often have broader attack surfaces compared to traditions systems.
+* Attack surface: AI systems often have broader attack surfaces compared to traditions systems.
 
 * Ethical considerations: Making sure that Ai is not used for illegal or unethical tasks and projects.
 
@@ -402,10 +402,10 @@ These similarities show that AI systems require a blend of traditional as well a
 #### What tools do we have?
 
 * Counterfit: Open-source automation tool for AI that hepls conduct risk assessements and check robustness of algorithms.
-* AI security tollkit
+* AI security toolkit
 * Collaborative platforms.
 
-The elababoration of such tools is part of a growing field.
+The elaboration of such tools is part of a growing field.
 
 #### AI Red teaming
 -> AI red teaming differs from traditional red teaming in several key aspects:
@@ -435,7 +435,7 @@ The elababoration of such tools is part of a growing field.
 * Stay informed on AI safety
 * Comply with regulations
 
-#### Examples of security issues cuased by unethical use of AI
+#### Examples of security issues caused by unethical use of AI
 
 * AI in judicial systems
 * Manipulation of AI systems: Ai can be susceptibl to adversarial attacks (autonomous vehicules could be misled)
