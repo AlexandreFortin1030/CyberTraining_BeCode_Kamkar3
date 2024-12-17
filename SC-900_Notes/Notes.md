@@ -446,6 +446,7 @@ The elaboration of such tools is part of a growing field.
 
 
 # Part 2: Microsoft Security, Compliance, and Identity Fundamentals
+![My Local Image](./Pictures/quest.png)
 
 
 
