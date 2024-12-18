@@ -540,10 +540,12 @@ There are 2 group types:
 
  ##  C/ Describe hybrid identity
  ![My Local Image](./Pictures/25.png)
+ 
 -> More and more organizations are moving their workload to the cloud. However, many of these still have to this day a mixture of cloud-based and on-premises applications...
 Microsoft's hybrid identity span on-premises and cloud-based capabilities.
 
 
  ##  D/ Describe external identity
  ![My Local Image](./Pictures/26.png)
+
 -> Today's world is about collaboration, working with people inside and outside of your organization. Sometimes, you'll need to provide access to your organization's ressources to external users/guests.
