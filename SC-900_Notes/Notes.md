@@ -483,7 +483,7 @@ Formerly called Azure active directory, is Microsoft's cloud-based identity and 
 -> Microsoft Entra ID provides an Identity Secure Score to help assess how aligned the company is with Microsoft best security practices.
 
 #### Basic terminology
-* Tenant: A Microsoft Entra ID instance in which infos about a single organization resides.
+* Tenant: (locataire), is a dedicated and isolated space within Microsoft Entra ID, where an organization can mange its users, groups, apps and other ressources.
 * Directory: A database or catalog of identities and ressources associated with a "Tenant".
 
 #### Who uses Microsoft Entra ID?
@@ -503,3 +503,47 @@ But to what can I assign an identity??
 * To physical devices
 * To Software-based objects (VMs, apps, containers etc.)
 
+#### User identity
+This type of identity represent people such as employyes or externl users. 
+They can authenticate either:
+* Internaly (the user has an account on the host organization's Microsoft Entra ID)
+* Externally (The user uses an external ME ID account)
+
+
+#### Workload identity
+-> Is an identity you assign to a software Workload. it enables it to authenticate to and access other services and ressources.
+
+* Application and service principals:
+An identity for an apllication.
+
+* Managed identity:
+A type of service principal that are automatically managed in Microsoft Entra ID. So there is no need for a developer to manage any credentials. For example, a dev can built an app using Azure VMs that access Azure Storage.
+
+
+#### Device identity
+-> mobile device, laptop, servers, printers, etc.
+A device ID gives admins informations they can use when making access or config decisions.
+Whe can distinguish:
+* Microsoft Entra registered devices:
+   * Users can access the organization's ressources with their personal device. 
+* Microsoft Entra joined:
+   * Device joined to ME ID through another organization.
+* Microsoft Entra hybrid joined devices.
+
+#### Groups
+If you have several identities with the same access needs, you can create a group.
+There are 2 group types:
+* Security:
+   * Used to manage user and device access to shared ressources.
+* Microsoft 365:
+   * Used for grouping users according to collaboration needs.
+
+ ##  C/ Describe hybrid identity
+ ![My Local Image](./Pictures/25.png)
+-> More and more organizations are moving their workload to the cloud. However, many of these still have to this day a mixture of cloud-based and on-premises applications...
+Microsoft's hybrid identity span on-premises and cloud-based capabilities.
+
+
+ ##  D/ Describe external identity
+ ![My Local Image](./Pictures/26.png)
+-> Today's world is about collaboration, working with people inside and outside of your organization. Sometimes, you'll need to provide access to your organization's ressources to external users/guests.
