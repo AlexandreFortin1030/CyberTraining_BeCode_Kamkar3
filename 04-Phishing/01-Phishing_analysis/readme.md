@@ -1,0 +1,2 @@
+## Phishing
+This folder contains 5 case study. Each case is a .eml file that has been labeld as suspicious. The file is analysed and key informations are collected in a report, highlighting weather it is a phishing attempt or a regular email.

@@ -514,7 +514,7 @@ They can authenticate either:
 -> Is an identity you assign to a software Workload. it enables it to authenticate to and access other services and ressources.
 
 * Application and service principals:
-An identity for an apllication.
+An identity for an application.
 
 * Managed identity:
 A type of service principal that are automatically managed in Microsoft Entra ID. So there is no need for a developer to manage any credentials. For example, a dev can built an app using Azure VMs that access Azure Storage.
@@ -525,10 +525,11 @@ A type of service principal that are automatically managed in Microsoft Entra ID
 A device ID gives admins informations they can use when making access or config decisions.
 Whe can distinguish:
 * Microsoft Entra registered devices:
-   * Users can access the organization's ressources with their personal device. 
+   * Users can access the organization's ressources with their personal device (phones etc.). 
 * Microsoft Entra joined:
-   * Device joined to ME ID through another organization.
-* Microsoft Entra hybrid joined devices.
+   * Device joined to ME ID through organization's devices.
+* Microsoft Entra hybrid joined devices:
+   * A mixture of both.
 
 #### Groups
 If you have several identities with the same access needs, you can create a group.
@@ -540,7 +541,7 @@ There are 2 group types:
 
  ##  C/ Describe hybrid identity
  ![My Local Image](./Pictures/25.png)
- 
+
 -> More and more organizations are moving their workload to the cloud. However, many of these still have to this day a mixture of cloud-based and on-premises applications...
 Microsoft's hybrid identity span on-premises and cloud-based capabilities.
 
@@ -549,3 +550,42 @@ Microsoft's hybrid identity span on-premises and cloud-based capabilities.
  ![My Local Image](./Pictures/26.png)
 
 -> Today's world is about collaboration, working with people inside and outside of your organization. Sometimes, you'll need to provide access to your organization's ressources to external users/guests.
+* Collaborate with business guests
+* Secure apps for consumers and business customers
+(more on this here: https://learn.microsoft.com/en-us/training/modules/explore-basic-services-identity-types/5-describe-external-identities)
+
+# III/ Describe Microsoft Security copilot
+
+## A/ terminology
+
+* Session
+   * A particular conversation with copilot
+* Prompt
+   * A specific question with a session
+* Capability
+   * A function Copilot may use to solve a problem
+* Plugin
+   * A collection of capabilities from one source
+* Orchestrator
+   * Copilot's system that combines capabilities to answer the user's demand.
+
+## B/ Elements of an effective prompt (user request)
+-> A good prompt often results in an adequate response/solution.
+* A goal
+* A context
+* Expectations
+* A source
+#### Tips
+
+* Address to it as "you"
+* Give positive instructions instead of "you should not..."
+
+
+## C/ How to enable Microsoft's Security Copilot
+
+#### Provision capacity
+MSC is a comercial solution that needs to be paid for. the capacity thta can be provisioned is a sort of metric thta represents the amount of computing power that you dispose of to run your prompts and find solutions.
+
+#### Setup default environnement
+#### Assign role permissions
+
