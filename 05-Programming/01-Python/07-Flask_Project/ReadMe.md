@@ -1,5 +1,5 @@
 # Flask secure back-end
- ![Alt text](/07-Flask_Project/pictures/01.jpg)
+ ![Alt text](pictures/01.jpg)
  #### Flask is a lightweight python framework designed for web developement. The idea behind this project is to design a secure back-end for the "comment section" of a website. This sections takes a few informations such as name, surname, email and message and sends it to the server. It has therefore to implement validation and sanitization mechanisms in order for it to be secure.
 
  ## Classic Back-end vulnerabilities
@@ -10,7 +10,7 @@
  Getting a bit further into technicalities, we will discuss breifly the following two functions:
 
 ### Sanitization
-  ![Alt text](/07-Flask_Project/pictures/02.png)
+  ![Alt text](pictures/02.png)
 
 - This function gets a string as an input and gives back a string as an output.
 - It strips whitespaces fron the user input so then it prevents unexpected behavior such as validation or data storage fail.
@@ -18,7 +18,7 @@
 
 ### Validation
 
-  ![Alt text](/07-Flask_Project/pictures/03.png)
+  ![Alt text](pictures/03.png)
 
   This second function is about validation after the input has been sanitized.
 
@@ -28,7 +28,7 @@
 
 ### Mail Validation
 
-  ![Alt text](/07-Flask_Project/pictures/04.png)
+  ![Alt text](pictures/04.png)
 
 This last function follows the same logic as the first one but is design to handle emails and uses Regular expressions for it.
 
